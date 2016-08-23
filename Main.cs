@@ -39,7 +39,9 @@ namespace Wox.Plugin.Clipboard
                     {
                         System.Windows.Forms.Clipboard.SetText(o);
                         context.API.HideApp();
-                        //keyboardSimulator.ModifiedKeyStroke(VirtualKeyCode.CONTROL, VirtualKeyCode.VK_V);
+                        keyboardSimulator.ModifiedKeyStroke(VirtualKeyCode.CONTROL, VirtualKeyCode.VK_V);
+                        keyboardSimulator.KeyDown(VirtualKeyCode.CONTROL);
+                        keyboardSimulator.KeyDown(VirtualKeyCode.CONTROL);
                         return true;
                     }
                     catch (Exception e)
